@@ -43,14 +43,13 @@ const Header = () => {
     console.log("data", numData);
   }, [data]);
   return (
-    <div className="bg-black relative ">
-    <img src="public/vite.svg" alt="" />
+    <div className="bg-black relative  ">
     <div className="w-[100%] h-[100vh] grid grid-cols-1 md:grid-cols-1 max-w-7xl m-[auto]  items-center  text-center">
 
       <div className="flex flex-col mt-[100px]  ">
         {numData == 10 ? (
           <div>
-            <div className="avatar mb-[40px]">
+            <div className="avatar mb-[40px]  mt-[29px]">
               <div className="w-[300px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                 <img src="/img (2).png" />
               </div>
