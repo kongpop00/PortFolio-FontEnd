@@ -52,7 +52,7 @@ const Header = () => {
           <div>
             <div className="avatar mb-[40px]">
               <div className="w-[300px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="public/img (2).png" />
+                <img src="/img (2).png" />
               </div>
             </div>
           </div>
