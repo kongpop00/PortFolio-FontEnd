@@ -1,5 +1,5 @@
 
-import items from './dataFolio.json'
+
 import "swiper/css";
 
 import "swiper/css";

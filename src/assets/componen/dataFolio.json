@@ -3,21 +3,21 @@
         "id"  : 1,
         "name" : "shopping-cartsssss",
         "data" : "The Airbnb Clone project is a desktop website development project to prove myself cancreate a website that mimics and design of the Airbnb website ,Creating interface layout with HTML5 and decorating the user interface with CSS3 along with Bootstrap framework",
-        "deploy": "www.",
+        "deploy": "https://shopping-cart-v1-delta.vercel.app/",
         "github": "www",
-        "img1" :  "public/folio/1.png",
-        "img2" :  "public/folio/2.png",
-        "img3" :  "public/folio/3.png"
+        "img1" :  "/folio/shopping-Cart/shopping-1.png",
+        "img2" :  "/folio/shopping-Cart/shoping-2.png",
+        "img3" :  "/folio/shopping-Cart/shoping-3.png"
     },
     {
         "id"  : 2,
         "name" : "Pokemon",
         "data" : "The Airbnb Clone project is a desktop website development project to prove myself cancreate a website that mimics and design of the Airbnb website ,Creating interface layout with HTML5 and decorating the user interface with CSS3 along with Bootstrap framework",
-        "deploy": "www.",
+        "deploy": "https://pokemon-beige-three.vercel.app/",
         "github": "www",
-        "img1" :  "public/folio/1.png",
-        "img2" :  "public/folio/2.png",
-        "img3" :  "public/folio/3.png"
+        "img1" :  "/folio/pokemon-/pokemon-1.png",
+        "img2" :  "/folio/pokemon-/pokemon-2.png",
+        "img3" :  "/folio/pokemon-/pokemon-3.png"
     },
     {
         "id"  : 3,
@@ -33,21 +33,21 @@
         "id"  : 4,
         "name" : "CRUD",
         "data" : "The Airbnb Clone project is a desktop website development project to prove myself cancreate a website that mimics and design of the Airbnb website ,Creating interface layout with HTML5 and decorating the user interface with CSS3 along with Bootstrap framework",
-        "deploy": "www.",
+        "deploy": "https://crud-psi-silk.vercel.app/",
         "github": "www",
-        "img1" :  "public/folio/1.png",
-        "img2" :  "public/folio/2.png",
-        "img3" :  "public/folio/3.png"
+        "img1" :  "/folio/crud/ceud-1.png",
+        "img2" :  "/folio/crud/curd-2.png",
+        "img3" :  "/folio/crud/curd-3.png"
     },
     {   
         "id"  : 5,
         "name" : "Airbnb",
         "data" : "The Airbnb Clone project is a desktop website development project to prove myself cancreate a website that mimics and design of the Airbnb website ,Creating interface layout with HTML5 and decorating the user interface with CSS3 along with Bootstrap framework",
-        "deploy": "www.",
-        "github": "www",
-        "img1" :  "public/folio/1.png",
-        "img2" :  "public/folio/2.png",
-        "img3" :  "public/folio/3.png"
+        "deploy": "https://airbnb-ebon-rho.vercel.app/",
+        "github": "https://github.com/kongpop00/Airbnb",
+        "img1" :  "/folio/airbnb/airbnb-1.png",
+        "img2" :  "/folio/airbnb/airbnb-2.png",
+        "img3" :  "/folio/airbnb/airbnb-3.png"
     }
        
 ]

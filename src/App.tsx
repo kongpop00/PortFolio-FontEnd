@@ -1,4 +1,4 @@
-import Folio from "./assets/componen/Folio"
+
 import Header from "./assets/componen/Header"
 import Nav from "./assets/componen/Nav"
 import PortFolio from "./assets/componen/PortFolio"
