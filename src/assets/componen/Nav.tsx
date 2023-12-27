@@ -1,65 +1,135 @@
-import { useState } from "react";
+import {  useState } from "react";
+import { HashLink } from "react-router-hash-link";
+import Close from "./colseNav";
+import Hemberger from "./Hemberger";
+import Typewriter from "typewriter-effect";
 const Nav = () => {
   const data = ["Hi !", " Hello ", "Welcome"];
   const [textnav, setTextNav] = useState(0);
-const [open  ,setopen]=useState(false)
+  const [open, setopen] = useState(false);
+  const scrollWithOffsetNav = (el: any) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -200;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
+  const scrollWithOffsetproject = (el: any) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
 
-const handleOpen =()=>{
-    setopen(!open)
-}
+  const handleOpen = () => {
+    setopen(!open);
+  };
+
   if (textnav < data.length) {
     setTimeout(() => {
       setTextNav(textnav + 1);
     }, 4000);
   } else setTextNav(0);
 
+  const on_of_Hemberger = () => {
+    setopen(!open);
+  };
+
   return (
-    <div className="w-full  fixed  z-50 ">
-      <div className="flex p-[30px] justify-between w-full bg-black z-50 fixed">
-        <div className="th text-center text-[22px] font-[600] text-white item-center animate-bounce">
-          {data[textnav]}
-        </div>
-        <div >
-          <label className="btn btn-circle swap swap-rotate bg-black text-white border-none ">
-            {/* this hidden checkbox controls the state */}
-            <input type="checkbox" onClick={handleOpen} />
-
-            {/* hamburger icon */}
-            <svg
-              className="swap-off fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 512 512"
-            >
-              <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
-            </svg>
-
-            {/* close icon */}
-            <svg
-              className="swap-on fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 512 512"
-            >
-              <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
-            </svg>
-          </label>
-        </div>
+    <div className="bg-black w-[100%] h-[100px] flex justify-between fixed z-30 items-center px-[50px] text-white">
+      <div className="font-[500] text-[20px]">
+      <Typewriter
+                  options={{
+                    strings: [
+                      `${data[textnav]}`
+                    ],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
       </div>
-      {/**menu */}
-        {open && (
-
-              <div className="w-full  flex flex-col items-center py-[20px] text-white text-[30px] z-40 h-[100vh] bg-black absolute top-[100px]">
-              <a>Home</a>
-              <a>Folio</a>
-              <a>About</a>
-              <a>contact</a>
-      
-            </div>
+      <div>
+        {open ? (
+          <div className=" absolute top-[150px] left-[50%] right-[50%] z-50 text-center  md:hidden">
+            <Close on_of_Hemberger={on_of_Hemberger} />
+          </div>
+        ) : (
+          <div className=" absolute top-[30px] right-[50px] md:hidden ">
+            <Hemberger on_of_Hemberger={on_of_Hemberger} />
+          </div>
         )}
-    
+      </div>
+
+      <div className="md:flex w-[20%] justify-between font-[500] text-[20px] mr-[150px] lg:mr-[100px] hidden ">
+        <HashLink
+          className="hover:border-b-2 border-[#8a40fa] p-2"
+          smooth
+          to={"#about"}
+          scroll={(el) => scrollWithOffsetNav(el)}
+        >
+          {" "}
+          About
+        </HashLink>
+        <HashLink
+          className="hover:border-b-2 border-[#8a40fa] p-2"
+          smooth
+          to={"#skills"}
+          scroll={(el) => scrollWithOffsetNav(el)}
+        >
+          {" "}
+          Skills
+        </HashLink>
+        <HashLink
+          className="hover:border-b-2 border-[#8a40fa] p-2"
+          smooth
+          to={"#project"}
+          scroll={(el) => scrollWithOffsetproject(el)}
+        >
+          {" "}
+          Projects
+        </HashLink>
+        <HashLink
+          className="hover:border-b-2 border-[#8a40fa] p-2"
+          smooth
+          to={"#skills"}
+          scroll={(el) => scrollWithOffsetNav(el)}
+        >
+          {" "}
+          Contact
+        </HashLink>
+      </div>
+
+      {open && (
+        <div className="leading-[60px] w-[100%] pt-[150px] left-4 flex flex-col items-center py-[20px] bg-black text-white text-[30px] z-40 h-[100vh] fixed top-[100px]">
+          <button onClick={handleOpen}><HashLink
+              smooth
+              to={"#about"}
+              scroll={(el) => scrollWithOffsetNav(el)}
+              className="hover:text-[#8a40fa]"
+            >
+             
+             ABOUT
+            </HashLink>
+          </button>
+          <button onClick={handleOpen}><HashLink
+              smooth
+              to={"#skills"}
+              scroll={(el) => scrollWithOffsetNav(el)}
+              className="hover:text-[#8a40fa]"
+            >
+             
+              SKILL
+            </HashLink>
+          </button>
+          <button onClick={handleOpen}><HashLink
+              smooth
+              to={"#project"}
+              scroll={(el) => scrollWithOffsetNav(el)}
+              className="hover:text-[#8a40fa]"
+            >
+             
+            PROJECT
+            </HashLink>
+          </button>
+        </div>
+      )}
     </div>
   );
 };
