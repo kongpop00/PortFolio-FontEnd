@@ -13,7 +13,7 @@ const Project = () => {
         return (
           <div
             key={e.id}
-            className="box  flex flex-col md:flex-row md:p-[20px]  lg:gap-y-[100px] m-[auto] w-[90%] md:w-[95%] xl:w-[100%] h-[500px]  md:h-[350px] mt-[50px] border-[1px] rounded-[10px] items-center lg:overflow-hidden overflow-scroll "
+            className="box  flex flex-col md:flex-row md:p-[20px]  lg:gap-y-[100px] m-[auto] w-[90%] md:w-[95%] xl:w-[100%] h-[500px]  md:h-[350px] mt-[20px] border-[1px] rounded-[10px] items-center lg:overflow-hidden overflow-scroll "
           >
             <div className=" w-[250px]  md:w-[30%] mt-[20px] md:mt-0 ">
               <Swiper

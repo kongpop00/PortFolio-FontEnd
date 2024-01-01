@@ -15,6 +15,7 @@ const Header = () => {
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
 }
 
+
   let colorCahnge = "";
   let colorCahnge2 = "";
 
