@@ -1,13 +1,20 @@
-type Hemberger ={
-    on_of_Hemberger : ()=>void
-  }
+import { useLayoutEffect } from "react";
+import gsap from "gsap";
+
   
-  const Close = (props: Hemberger) => {
-    const { on_of_Hemberger } = props;
+  const Close = ({on_of_Hemberger,open}:any) => {
+
+    useLayoutEffect(():any=>{
+      gsap.from('.close' , {duration:0.4, ease: "sine.in", rotate:300 })
+    
+     
+      
+  },[open])
+  
   
     return (
-      <button onClick={on_of_Hemberger} className="z-50">
-        <label className="btn btn-circle swap swap-rotate ">
+      <button onClick={on_of_Hemberger} className="close z-50 ">
+        <label className="   btn btn-circle swap swap-rotate ">
           {/* close icon */}
   
           <svg

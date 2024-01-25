@@ -1,19 +1,29 @@
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { useEffect, useState } from "react";
-import { HashLink } from "react-router-hash-link";
+import {  useLayoutEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import gsap from "gsap";
 import Typewriter from "typewriter-effect";
-
-const Header = () => {
+import '../componen/header.css'
+const Header = ({setIsOpenNav}:any) => {
   const [data, setData] = useState<string>("0");
   const numData = parseInt(data);
 
-  const scrollWithOffset = (el:any) => {
-    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -200; 
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
-}
+  useLayoutEffect(():any=>{
+
+    gsap.from('.menuNav' , {opacity:0 , direction:2  ,delay:0.5, stagger:2})
+    gsap.from(".step1", { opacity:0 , duration:1 ,delay:0.5 , y:10});
+    gsap.to('.stap2' , {delay:2 , opacity:1, duration: 1 ,ease:'elastic'})
+    gsap.to('.stap3' , {delay:2 , duration: 1 ,ease:'elastic', translateY:20})
+},[])
+
+
+
+
+
+ 
+
 
 
   let colorCahnge = "";
@@ -47,25 +57,23 @@ const Header = () => {
     colorCahnge2 = "black";
   }
 
-  useEffect(() => {
-    console.log("data", numData);
-  }, [data]);
+ 
   return (
-    <div id="about" className="bg-black relative  w-full p-[20px]  ">
+    <div id='section-about' className="bg-black fixed w-full p-[20px]  ">
       <div className="w-[100%] h-[100vh] grid grid-cols-1  max-w-7xl m-[auto]  items-center  text-center">
         <div className="flex flex-col mt-[100px]  ">
           {numData == 10 ? (
             <div>
-              <div className="avatar mb-[40px]  mt-[29px]">
-                <div className="  w-[200px] sm:w-[300px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                  <img src="/img (2).png" />
+              <div className=" mb-[40px]   mt-[29px] ">
+                <div className=" borderImg w-[200px] relative sm:w-[350px] sm:h-[350px] bg-white m-[auto]  bg-gradient-to-r from-[#471facd7] via-[#9a12a4d3] to-[#d8079dd5]  ">
+                  <img className="w-[350px]  backdrop-brightness-125 relative  h-[350] z-30" src="/kongImg.png.png" />
                 </div>
               </div>
             </div>
           ) : (
-            <div className="leading-[80px] text-white relative ">
+            <div className= "step1 leading-[80px] text-white relative ">
               <h1 className=" text-[50px] sm:text-[100px] font-[600]">WELCOME</h1>
-              <h1 className="text-[30px] sm:text-[50px] font-[600] px-[10px]">
+              <h1 className="box1 text-[30px] sm:text-[50px] font-[600] px-[10px]">
                 to my portfolio
               </h1>
               <div className="text-[20px] sm:text-[30px] px-[10px] text-[#8a40fa]">
@@ -80,7 +88,7 @@ const Header = () => {
 
           <div className="relative w-[250px] sm:w-[300px] m-[auto]">
             <input
-              className="w-full range range-[white] border-2 h-4"
+              className="step1 w-full range range-[white] border-2 h-4"
               type="range"
               min="0"
               max="10"
@@ -138,7 +146,7 @@ const Header = () => {
                    Dowload CV
                   </button>
                   <button className="mt-[20px] border-[1px] p-[8px] px-[10px] border-[#8a40fa] text-[22px] rounded-xl hover:border-[#ff64f2]  z-50 mx-[10px] ">
-                  <HashLink smooth to={'#skills'} scroll={el => scrollWithOffset(el)}> Get Started</HashLink>
+                  <button onClick={()=>setIsOpenNav(true)}><NavLink to='skill'> Get Started</NavLink></button>
                   </button>
                 </div>
               )}

@@ -6,14 +6,17 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCube, Pagination } from "swiper/modules";
 
+
 const Project = () => {
+  
+
   return (
     <div className="py-[20px]">
       {items.map((e) => {
         return (
           <div
             key={e.id}
-            className="box  flex flex-col md:flex-row md:p-[20px]  lg:gap-y-[100px] m-[auto] w-[90%] md:w-[95%] xl:w-[100%] h-[500px]  md:h-[350px] mt-[20px] border-[1px] rounded-[10px] items-center lg:overflow-hidden overflow-scroll "
+            className=" project-1 flex flex-col md:flex-row md:p-[20px]  lg:gap-y-[100px] m-[auto] w-[90%] md:w-[95%] xl:w-[100%] h-[500px]  md:h-[350px] mt-[20px] border-[1px] rounded-[10px] items-center lg:overflow-hidden overflow-scroll "
           >
             <div className=" w-[250px]  md:w-[30%] mt-[20px] md:mt-0 ">
               <Swiper

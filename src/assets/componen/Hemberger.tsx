@@ -1,8 +1,7 @@
-type Hemberger ={
-    on_of_Hemberger : ()=>void
-  }
-  const Hemberger = (props: Hemberger) => {
-    const { on_of_Hemberger } = props;
+
+    const Hemberger = ({on_of_Hemberger}:any) => {
+   
+
   
     return (
       <button onClick={on_of_Hemberger} className="z-50">
