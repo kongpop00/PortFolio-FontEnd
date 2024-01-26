@@ -152,7 +152,7 @@ const Header = ({ setIsOpenNav }: any) => {
                     </a>
                   </div>
                  
-                <a href="/Cv.kongpop-nualsaard.pdf" download> <button className={`${styleBtn}`} >Dowload CV</button></a>
+                <a href="https://drive.google.com/file/d/1Y_wfpqirL32McRXvMqk1Wv8PIWQcK6f0/view?usp=sharing" target="_blank" > <button className={`${styleBtn}`} >Dowload CV</button></a>
                   <button className={`${styleBtn}`}>
                     <button onClick={() => setIsOpenNav(true)}>
                       <NavLink to="skill"> Get Started</NavLink>
