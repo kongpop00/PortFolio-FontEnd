@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { useLayoutEffect } from "react";
 import { NavLink } from "react-router-dom";
 const Skills = () => {
