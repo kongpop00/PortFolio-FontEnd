@@ -55,13 +55,14 @@ const Project = () => {
               </Swiper>
             </div>
             <div className=" w-[90%] lg:w-[60%] py-[20px] md:ml-[50px] lg:p-[40px] flex flex-col h-[100%] text-white">
-              <h1 className="  text-[30px] sm:text-[40px] md:text-[30px] font-[600]">{e.name}</h1>
+              <h1 className="  text-[30px] sm:text-[40px] md:text-[30px] font-[600] text-[#804ecc]">{e.name}</h1>
               <h2 className="mt-[20px] md:text-[18px] text-[18px] sm:text-[20px]">{e.data}</h2>
-              <div className="deploy">
-                deploy: <a href="">{e.deploy}</a>
+
+              <div className="deploy mt-[20px]">
+                <span className="text-22px font-[600] text-[#8c69c0]">Demo:</span> <a className="ml-[15px]" href={e.deploy}>{e.deploy}</a>
               </div>
               <div className="github">
-                deploy: <a href="">{e.github}</a>
+              <span className="text-22px font-[600] text-[#8c69c0]">Github:</span> <a  className="ml-[10px]" href={e.github}>{e.github}</a>
               </div>
             </div>
           </div>

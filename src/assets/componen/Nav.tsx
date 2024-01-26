@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import {  useLayoutEffect, useState } from "react";
 
 import Close from "./colseNav";
 import Hemberger from "./Hemberger";
@@ -54,7 +54,7 @@ const Nav = ({isOpenNav}:any) => {
         )}
       </div>
         {isOpenNav &&
-      <div className="menuNav md:flex w-[15%] justify-between font-[500] text-[20px] mr-[150px] lg:mr-[100px] hidden ">
+      <div className="menuNav md:flex  w-[300px] justify-between font-[500] text-[20px] mr-[100px] md:mr-[20px] lg:mr-[30px] hidden ">
         {}<NavLink end to={`/`} className={` border-b-4 border-black hover:border-[#8a40fa] "border-b-4 ` }  style={({ isActive }) => {return isActive ? { color: "#8a40fa" , borderBottomWidth:'2px',borderColor:'white' } : {};}}>About</NavLink>
         <NavLink  to={`/skill`} className={`border-b-4 border-black hover:border-[#8a40fa] "border-b-4 ` }  style={({ isActive }) => {return isActive ? {  color: "#8a40fa" , borderBottomWidth:'2px',borderColor:'white'  } : {};}}>Skill</NavLink>
         <NavLink to={`/project`} className={`border-b-4 border-black hover:border-[#8a40fa] "border-b-4 ` }  style={({ isActive }) => {return isActive ? { color: "#8a40fa" , borderBottomWidth:'2px',borderColor:'white'  } : {};}}>Project</NavLink>
