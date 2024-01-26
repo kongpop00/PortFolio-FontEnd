@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import Typewriter from "typewriter-effect";
 import "../componen/header.css";
+import { Link } from "react-router-dom";
 const Header = ({ setIsOpenNav }: any) => {
   const [data, setData] = useState<string>("0");
   const numData = parseInt(data);
@@ -151,7 +152,7 @@ const Header = ({ setIsOpenNav }: any) => {
                     </a>
                   </div>
                  
-                  <a href="/Cv.kongpop-nualsaard.pdf"  download>  <button className={`${styleBtn}`}>Dowload CV</button></a>
+                  <Link  to={'public/Cv.kongpop-nualsaard.pdf'}  target="_blank"  rel="noopener noreferrer" download>Download CV</Link>
                   <button className={`${styleBtn}`}>
                     <button onClick={() => setIsOpenNav(true)}>
                       <NavLink to="skill"> Get Started</NavLink>
