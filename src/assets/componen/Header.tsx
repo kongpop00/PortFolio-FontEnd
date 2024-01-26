@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import Typewriter from "typewriter-effect";
 import "../componen/header.css";
-import { Link } from "react-router-dom";
 const Header = ({ setIsOpenNav }: any) => {
   const [data, setData] = useState<string>("0");
   const numData = parseInt(data);
@@ -53,6 +52,7 @@ const Header = ({ setIsOpenNav }: any) => {
   } else if (numData === 10) {
     colorCahnge2 = "black";
   }
+
   const styleBtn =
     "sm:mt-[20px] border-[1px] p-[8px] px-[10px] border-[#8a40fa] text-[22px] hover:border-[#ff64f2] rounded-xl h-[40px] W-[120px] text-[12px] md:w-[150px] md:h-[60px] md:text-[22px] z-50 mx-[10px]";
   return (
@@ -144,15 +144,15 @@ const Header = ({ setIsOpenNav }: any) => {
                     <button className="p-[10px]  hover:text-[#8a40fa]">
                       <GitHubIcon />
                     </button>
-                    </a>
-                    <a href="https://www.instagram.com/konggg__/" target="_blank">
+                    
+                    <a href="https://www.instagram.com/konggg__/" target="_blank"></a>
                     <button className="p-[10px]  hover:text-[#8a40fa]">
                       <InstagramIcon />
                     </button>
                     </a>
                   </div>
                  
-                  <Link  to={'public/Cv.kongpop-nualsaard.pdf'}  target="_blank"  rel="noopener noreferrer" download>Download CV</Link>
+                <a href="/Cv.kongpop-nualsaard.pdf" download> <button className={`${styleBtn}`} >Dowload CV</button></a>
                   <button className={`${styleBtn}`}>
                     <button onClick={() => setIsOpenNav(true)}>
                       <NavLink to="skill"> Get Started</NavLink>
